@@ -1,2 +1,12 @@
 @import 'utils/variables';
 @import 'components/type';
+
+@keyframes pageAnimation{
+    to{
+        background-color: rebeccapurple;
+    }
+}
+
+.pageAnimation{
+    animation: pageAnimation 3s forwards;
+}
