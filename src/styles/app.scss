@@ -1,6 +1,7 @@
 @import 'utils/variables';
 @import 'components/type';
 
+/* Exercice 1 */
 /*@keyframes pageAnimation{
     to{
         background-color: rebeccapurple;
@@ -11,6 +12,8 @@
     animation: pageAnimation 3s forwards;
 }*/
 
+/* Exercice 2 */
+/*
 * {
     padding:0;
     margin:0;
@@ -85,4 +88,49 @@ body {
 
 .anim-trans {
     animation: anim 4s ease-in-out;
+}
+*/
+
+/* Exercice 3 */
+
+@keyframes animationBloc {
+    to{
+        transform: skew(-10deg) translateX(-100%);
+    }
+}
+
+.bloc{
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    background-color: aqua;
+    top: 0;
+    left: -100px;
+    transform: skew(-10deg);
+    z-index: -1;
+}
+
+.pageAnimation .bloc {
+    animation: animationBloc .5s forwards;
+}
+
+@keyframes animationBloc2 {
+    to{
+        transform: skew(-10deg) translateX(0);
+    }
+}
+
+.bloc2{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: aquamarine;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: skew(-10deg) translateX(-100%);
+}
+
+.pageAnimation .bloc2 {
+    animation: animationBloc2 .5s .25s forwards;
 }
